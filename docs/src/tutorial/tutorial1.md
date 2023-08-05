@@ -62,12 +62,6 @@ julia> using Pkg
 julia> Pkg.add("https://github.com/rubsc/ScenTrees2.jl")
 julia> using ScenTrees2
 julia> methods(Tree)
-# 4 methods for generic function "(::Type)":
-[1] Tree(name::String, parent::Array{Int64,1},
-children::Array{Array{Int64,1},1}, state::Array{Float64,2}, probability::Array{Float64,2})
-[2] Tree(identifier::Int64)
-[3] Tree(spec::Array{Int64,1})
-[4] Tree(spec::Array{Int64,1}, dimension)
 ```
 All the methods correspond to the way you can create a scenario tree. For the first method, the length of states must be equal to the length of the probabilities. In the 2nd method, you can call any of our predefined trees by just calling on the identifier (these identifiers are `0, 301, 302, 303, 304, 305, 306, 307, 401, 402, 4022, 404, 405`). And finally the most important methods are the 3rd and 4th method. If you know the branching structure of your scenario tree, then you can create an non-optimal starting tree using it. If you don't state the dimension you are working on, then it is defaulted into `1`. For example, `Tree([1,2,2,2,2])` creates a binary tree with states of dimension one as in Figure 1 above
 
@@ -84,9 +78,6 @@ Due to the above, we only describe a scenario lattice by:
 A scenario lattice has only one method.
 ```@repl
 julia> methods(Lattice)
-[1] method for generic function "(::Type)":
-[1] Lattice(name::String, state::Array{Array{Float64,2},1},
-probability::Array{Array{Float64,2},1})
 ```
 This method is not very important because we only need it to produce the results of the lattice approximation process. We will see later that for lattice approximation, we need the branching structure and so the structure of the lattice is not very important as in the case of a scenario tree.
 

@@ -76,8 +76,6 @@ The root of the tree is the node in which the tree starts from. The root of the 
 
 ```@repl
 julia> root(example1)
-1-element Array{Int64,1}
-1
 ```
 
 The function `root` can also give us a sequence of nodes to reach a particular node of the tree. It turns out that this function will be very important in stochastic approximation as it will give us a path that we can improve with samples from a stochastic process.
@@ -86,10 +84,6 @@ If we want a sequence of nodes to reach, for example, node 6 in the above tree, 
 
 ```@repl
 julia> root(example1,6)
-3-element Array{Int64,1}
-1
-3
-6
 ```
 
 ### Leaves of the tree

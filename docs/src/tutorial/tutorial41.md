@@ -65,11 +65,7 @@ julia> using ScenTrees2, CSV, Distributions
 julia> data = CSV.read(".../RandomDataWalk.csv")
 julia> Rdw = Matrix(data)
 julia> Kdt = kernel_scenarios(Rwd,Logistic;Markovian=true)
-(::getfield(ScenTrees,Symbol("#closure#52")){Array{Float64,2},
-Int64,Int64,Array{Float64,1},Array{Float64,1},Array{Float64,1}})
-(generic function with 1 method)
 julia> ExampleTraj = kernel_scenarios(Rwd, Logistic; Markovian = true)()
-[2.9313, -2.0964, 3.7671, 2.1476, 0.9424]
 ```
 As in `ExampleTraj` above, this function returns is a new sample according to the distribution of the density at the current stage and dependent on the history of all the data points.
 
