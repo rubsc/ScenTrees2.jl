@@ -57,7 +57,7 @@ A scenario tree is described by the following:
 5. Probabilities of transition from one node to another.
 
 A scenario tree is a mutable struct of type `Tree()`. To create a non-optimal scenario tree, we need to fix the branching structure and the dimension of the states of nodes you are working on. The type `Tree()` has different methods:
-```julia
+```@repl
 julia> using Pkg
 julia> Pkg.add("https://github.com/rubsc/ScenTrees2.jl")
 julia> using ScenTrees2
