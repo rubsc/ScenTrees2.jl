@@ -43,10 +43,3 @@ The following are the most important functions that ScenTrees2.jl package provid
 
 5. `Generation of scenarios from data`: This is a non-parametric technique for generating samples from a given limited data with unknown distribution. We use this process to generate new but different samples based of the data given using the conditional density estimation techniques. The new samples can then be used to generate scenario trees and scenario lattices. The function `kernel_scenarios(data, KernelDistribution = Logistic; Markovian = true)` takes: 1. A limited two dimensional data (i.e., `N x T` matrix where `N` is the number of trajectories and `T` is the number of stages, 2. Kernel Distribution is the distribution that you want to use for the kernels. The default distribution is `Logistic distribution`. The user is free to choose any distribution he/she wishes from the package `Distributions.jl`, and, 3. an optional keyword to determine whether the trajectories generated are Markovian or not. When you set `Markovian = true`, the trajectories here are Markovian and are used to approximate a scenario lattice. Similarly, if you set `Markovian = false`, the trajectories are non-Markovian and are to generate scenario trees.
 
-
-```@index
-```
-
-```@autodocs
-Modules = [ScenTrees2]
-```
