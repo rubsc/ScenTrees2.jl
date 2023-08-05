@@ -32,7 +32,7 @@ The user is free to choose any branching structure for the scenario tree/lattice
 
 Using the binary branching structure stated above, we obtain the following valuated probability tree that represents the above stochastic process:
 
-![Scenario Tree 1x2x2x2x2](../assets/TreeExample.png)
+![Scenario Tree 1x2x2x2x2][def]
 
 *Figure 1: Scenario Tree 1x2x2x2x2*
 
@@ -100,3 +100,5 @@ This method is not very important because we only need it to produce the results
 6. Plotting utilities (these functions include: tree_plot, plot_hd and plot_lattice),
 7. Examples of process functions (gaussian_path1D, gaussian_path2D, running_maximum1D, running_maximum2D, path) and,
 8. bushiness_nesdistance (returns a graph showing how different factors affects the multistage distance.)
+
+[def]: ../assets/TreeExample.png
