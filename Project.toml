@@ -1,0 +1,13 @@
+name = "ScenTrees2"
+uuid = "284d94cc-9bb7-436d-9ea4-a95a381585c4"
+authors = ["Ruben Schlotter"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.9"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
