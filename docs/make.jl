@@ -14,9 +14,17 @@ makedocs(;
         edit_link="master",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages = ["Home" => "index.md",
+		"Tutorials" => Any["tutorial/tutorial1.md",
+				    "tutorial/tutorial2.md",
+				    "tutorial/tutorial3.md",
+				    "tutorial/tutorial31.md",
+				    "tutorial/tutorial4.md",
+				    "tutorial/tutorial41.md",
+				    "tutorial/tutorial5.md"
+				],
+		"Function Library" => "library.md",
+		]
 )
 
 deploydocs(;
