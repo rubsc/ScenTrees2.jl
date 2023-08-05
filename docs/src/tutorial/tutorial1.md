@@ -12,7 +12,7 @@ A scenario tree is a set of nodes and branches used in models of decision making
 
 A scenario tree/lattice is organized in levels which corresponds to stages ``1,\ldots,T``. Each node in a stage has a specified number of predecessors as defined by the branching structure. A node represents a possible state of the stochastic process and the vertices represents the possibility of transition between the two connected nodes. A scenario tree differs from a scenario lattice by the condition that each node in stage ``t`` must have one predecessor in stage ``t-1``. For a lattice, that is not the case; all the nodes in stage ``t-1`` share the same children in stage ``t``.
 
-## Goal of `ScenTreesMakie.jl`
+## Goal of `ScenTrees2.jl`
 
 We model stochastic processes by scenario trees and scenario lattices. The distributions of these processes may be continuous and involves parameters that are uncertain.
 
@@ -59,8 +59,8 @@ A scenario tree is described by the following:
 A scenario tree is a mutable struct of type `Tree()`. To create a non-optimal scenario tree, we need to fix the branching structure and the dimension of the states of nodes you are working on. The type `Tree()` has different methods:
 ```julia
 julia> using Pkg
-julia> Pkg.add("https://github.com/rubsc/ScenTreesMakie.jl")
-julia> using ScenTreesMakie
+julia> Pkg.add("https://github.com/rubsc/ScenTrees2.jl")
+julia> using ScenTrees2
 julia> methods(Tree)
 # 4 methods for generic function "(::Type)":
 [1] Tree(name::String, parent::Array{Int64,1},
@@ -82,9 +82,9 @@ Due to the above, we only describe a scenario lattice by:
 3. Probabilities of transition from one node to another in the lattice
 
 A scenario lattice has only one method.
-```julia
+```@repl
 julia> methods(Lattice)
- 1 method for generic function "(::Type)":
+[1] method for generic function "(::Type)":
 [1] Lattice(name::String, state::Array{Array{Float64,2},1},
 probability::Array{Array{Float64,2},1})
 ```

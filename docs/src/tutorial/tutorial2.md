@@ -1,5 +1,5 @@
 ```@meta
-CurrentModule = ScenTreesMakie
+CurrentModule = ScenTrees2
 ```
 
 # Scenario Trees
@@ -74,7 +74,7 @@ The above example shows that we have 1 node in stage 0, 2 nodes in stage 1 and 4
 
 The root of the tree is the node in which the tree starts from. The root of the tree has no parent; more or less, is the parent of all nodes.
 
-```julia
+```@repl
 julia> root(example1)
 1-element Array{Int64,1}
 1
@@ -84,7 +84,7 @@ The function `root` can also give us a sequence of nodes to reach a particular n
 
 If we want a sequence of nodes to reach, for example, node 6 in the above tree, we just call out the `root` function as follows:
 
-```julia
+```@repl
 julia> root(example1,6)
 3-element Array{Int64,1}
 1
@@ -125,8 +125,8 @@ julia> savefig("Tree402.png");
 
 We can plot a tree in 2 dimension as follows:
 
-```julia
-julia> pt = part_tree(Tree4022));
+```@repl
+julia> pt = part_tree(Tree4022);
 julia> tree_plot(pt[1])
 julia> savefig("Tree40221.png")
 julia> tree_plot(pt[2])
