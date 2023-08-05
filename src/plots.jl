@@ -216,7 +216,7 @@ Plots a given vector `path` on top of the tree/lattice
 """
 function plot_path!(path)
     tmpX = []; tmpY = [];
-    for t=2:length(path)
+    for t in Iterators.drop(eachindex(bs), 1)
         x = [t-1:t]; y = [path[t-1];path[t]];
         append!(tmpX,x,NaN); append!(tmpY,y,NaN);
     end

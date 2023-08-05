@@ -55,7 +55,7 @@ function structure(lat::Lattice)
     bs = [length(lat.state[i]) for i=1:length(lat.state)]; 
 
     edges = 0
-    for i=2:length(bs)
+    for i in Iterators.drop(eachindex(bs), 1)
         edges += bs[i-1]*bs[i]
     end
 
@@ -64,7 +64,6 @@ function structure(lat::Lattice)
 
     return bs, nodes,edges, paths
 end
-
 
 
 
